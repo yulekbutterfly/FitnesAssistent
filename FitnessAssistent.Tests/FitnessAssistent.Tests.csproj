@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="FitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CalculTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

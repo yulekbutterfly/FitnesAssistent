@@ -8,6 +8,7 @@ namespace FitnessAssistent.Tests
     [TestClass]
     public class FitTest
     {
+        //ТЕСТ-ПРОВЕРКА ПАРОЛЯ
             [TestMethod]
             public void ValidationPassword_CorrectPassword_returnTrue()
             {
@@ -195,7 +196,7 @@ namespace FitnessAssistent.Tests
                 Assert.AreEqual(ex, result);
             }
 
-
+        //ТЕСТ НА ДАТУ РОЖДЕНИЯ И ВОЗРАСТ
         [TestMethod]
         public void ValidationDateOfBirth_CorrectBith_True()
         {
@@ -230,130 +231,355 @@ namespace FitnessAssistent.Tests
                 Assert.AreEqual(ex, result);
             }
 
-        [TestMethod]
-        public void ValidationWeightHeight_CorrectInput_True()
-        {
-            //arrange 
 
-            string weightheight = "100";
+
+        //ЛОГИН 
+
+        [TestMethod]
+        public void ValidationLogin_CorrectLogin_returnTrue()
+        {
+            //arrange
+
+            string login = "NekkksaJulia12";
             bool ex = true;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
         [TestMethod]
-        public void ValidationWeightHeight_NumMinus_False()
+        public void ValidationLogin_OccupiedLogin_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "-10";
+            string login = "NEKKA1";
             bool ex = false;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
         [TestMethod]
-        public void ValidationWeightHeightNumNull()
+        public void ValidationLogin_SpacesInLogin_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "0";
+            string login = "NEK KA1";
             bool ex = false;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
-
         [TestMethod]
-        public void ValidationWeightHeightNumBol()
+        public void ValidationLogin_1Letter_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "333";
+            string login = "N";
             bool ex = false;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
-
         [TestMethod]
-        public void ValidationWeightHeightNotNum()
+        public void ValidationLogin_51Letter_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "fiifi";
+            string login = "JDSIKJDSNDNJSDKSDMSNDJSDMKSMDKSNDSMDKMSKMDKSDSMDKMKSDS";
             bool ex = false;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
-
         [TestMethod]
-        public void ValidationWeightHeightEsc()
+        public void ValidationLogin_NullLogin_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "    ";
+            string login = null;
             bool ex = false;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationLogin(login);
 
-            //assert 
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
         [TestMethod]
-        public void ValidationNameLName_CorrectNameLName_True()
+        public void ValidationLogin_OnlyWhiteSpacesLogin_returnFalse()
         {
-            //arrange 
+            //arrange
 
-            string weightheight = "Qweertyt";
+            string login = "             ";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationLogin(login);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        //Name and Last Name
+
+        [TestMethod]
+        public void ValidationName_CorrectName_returnTrue()
+        {
+            //arrange
+
+            string name = "Nekka";
             bool ex = true;
 
-            //act 
+            //act
 
-            bool result = ValidationResult.ValidationWeightHeight(weightheight);
+            bool result = Validation.ValidationName(name);
 
-            //assert 
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_TildaInName_returnTrue()
+        {
+            //arrange
+
+            string name = "Nekka-Julia";
+            bool ex = true;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_WhiteSpaceInName_returnFalse()
+        {
+            //arrange
+
+            string name = "Nekka Julia";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_NumberInName_returnFalse()
+        {
+            //arrange
+
+            string name = "Nek7Jul";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_1LetterName_returnFalse()
+        {
+            //arrange
+
+            string name = "N";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_51LetterInName_returnFalse()
+        {
+            //arrange
+
+            string name = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_NullName_returnFalse()
+        {
+            //arrange
+
+            string name = null;
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_OnlySpacesName_returnFalse()
+        {
+            //arrange
+
+            string name = "           ";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
 
             Assert.AreEqual(ex, result);
         }
 
 
 
+        //РОСТ И ВЕС 
+
+        [TestMethod]
+        public void ValidationHeight_CorrectHeight_returnTrue()
+        {
+            //arrange
+
+            string height = "166";
+            bool ex = true;
+
+            //act
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationHeight_LetterInHeight_returnFalse()
+        {
+            //arrange
+
+            string height = "1d66";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationHeight__returnFalse()
+        {
+            //arrange
+
+            string height = "1";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationHeight_Null_returnFalse()
+        {
+            //arrange
+
+            string height = null;
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationHeight_OnlyWhiteSpaces_returnFalse()
+        {
+            //arrange
+
+            string height = "           ";
+            bool ex = false;
+
+            //act
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
 
     }
 }

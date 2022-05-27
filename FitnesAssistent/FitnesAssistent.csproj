@@ -111,6 +111,7 @@
     <Compile Include="DB\User.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validation\Calculation.cs" />
     <Compile Include="Validation\Validation.cs" />
     <Compile Include="Windows\Assistent.xaml.cs">
       <DependentUpon>Assistent.xaml</DependentUpon>
