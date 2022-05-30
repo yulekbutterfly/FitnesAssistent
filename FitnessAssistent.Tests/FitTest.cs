@@ -10,10 +10,20 @@ namespace FitnessAssistent.Tests
     public class FitTest
     {
         //ТЕСТ-ПРОВЕРКА ПАРОЛЯ
+<<<<<<< HEAD
         [TestMethod]
         public void ValidationPassword_CorrectPassword_returnTrue()
         {
             //arrange 
+=======
+            [TestMethod]
+            public void ValidationPassword_CorrectPassword_returnTrue()
+            {
+                //arrange 
+
+                string password = "Watermelon123!";
+                bool ex = true;
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             string password = "Watermelon123!";
             bool ex = true;
@@ -194,9 +204,12 @@ string password = "NoNumber??";
 
             //assert 
 
+<<<<<<< HEAD
             Assert.AreEqual(ex, result);
         }
 
+=======
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
         //ТЕСТ НА ДАТУ РОЖДЕНИЯ И ВОЗРАСТ
         [TestMethod]
         public void ValidationDateOfBirth_CorrectBith_True()
@@ -236,6 +249,10 @@ string password = "NoNumber??";
 
         //ЛОГИН 
 
+
+
+        //ЛОГИН 
+
         [TestMethod]
         public void ValidationLogin_CorrectLogin_returnTrue()
         {
@@ -246,7 +263,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -263,7 +284,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -280,7 +305,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -297,7 +326,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -314,7 +347,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -331,7 +368,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -348,7 +389,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationLogin(login);
+=======
+            bool result = Validation.ValidationLogin(login);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -364,6 +409,7 @@ string password = "NoNumber??";
 
             string name = "Nekka";
             bool ex = true;
+<<<<<<< HEAD
 
             //act
 
@@ -385,6 +431,29 @@ string password = "NoNumber??";
             //act
 
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_TildaInName_returnTrue()
+        {
+            //arrange
+
+            string name = "Nekka-Julia";
+            bool ex = true;
+
+            //act
+
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -401,7 +470,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -418,7 +491,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -435,7 +512,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -452,7 +533,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -468,6 +553,7 @@ string password = "NoNumber??";
             bool ex = false;
 
             //act
+<<<<<<< HEAD
 
             bool result = ValidationResult.ValidationNameLName(name);
 
@@ -481,12 +567,31 @@ string password = "NoNumber??";
         {
             //arrange
 
+=======
+
+            bool result = Validation.ValidationName(name);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+        [TestMethod]
+        public void ValidationName_OnlySpacesName_returnFalse()
+        {
+            //arrange
+
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
             string name = "           ";
             bool ex = false;
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationNameLName(name);
+=======
+            bool result = Validation.ValidationName(name);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -507,7 +612,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationWeightHeight(height);
+=======
+            bool result = Validation.ValidationHeight(height);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -523,6 +632,7 @@ string password = "NoNumber??";
             bool ex = false;
 
             //act
+<<<<<<< HEAD
 
             bool result = ValidationResult.ValidationWeightHeight(height);
 
@@ -531,6 +641,16 @@ string password = "NoNumber??";
             Assert.AreEqual(ex, result);
         }
 
+=======
+
+            bool result = Validation.ValidationHeight(height);
+
+            //assert
+
+            Assert.AreEqual(ex, result);
+        }
+
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
         [TestMethod]
         public void ValidationHeight__returnFalse()
         {
@@ -541,7 +661,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationWeightHeight(height);
+=======
+            bool result = Validation.ValidationHeight(height);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -558,7 +682,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationWeightHeight(height);
+=======
+            bool result = Validation.ValidationHeight(height);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 
@@ -575,7 +703,11 @@ string password = "NoNumber??";
 
             //act
 
+<<<<<<< HEAD
             bool result = ValidationResult.ValidationWeightHeight(height);
+=======
+            bool result = Validation.ValidationHeight(height);
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 
             //assert
 

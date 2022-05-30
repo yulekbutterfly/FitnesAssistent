@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FitnesAssistent.Validation
 {
+<<<<<<< HEAD
     public class Calculation
+=======
+    class Calculation
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
     {
         public static double BMI(double weight, double height)
         {
@@ -30,4 +34,8 @@ namespace FitnesAssistent.Validation
             return Math.Round(bmr);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
