@@ -103,6 +103,7 @@ namespace FitnesAssistent.Validation
             if (AppData.context.User.Where(i => i.Login == login).FirstOrDefault() != null)
                 {
                     return false;
+                    
                 }
             return true;
             

@@ -5,180 +5,288 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FitnesAssistent.Windows"
         mc:Ignorable="d"
-        Title="Assistent" Height="700" Width="900">
+        Title="Assistent" Height="650" Width="800"
+        WindowStartupLocation="CenterScreen">
     <Grid >
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="40*"/>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
 
-
-            <RowDefinition Height="78*"/>
-            <RowDefinition Height="76*"/>
-            <RowDefinition Height="68*"/>
-            <RowDefinition Height="79*"/>
-            <RowDefinition Height="29*"/>
-
-            <RowDefinition Height="83*"/>
-            <RowDefinition Height="66*"/>
-            <RowDefinition Height="88*"/>
-
+            <RowDefinition Height="1.8*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="366*"/>
-            <ColumnDefinition Width="366*"/>
-            <ColumnDefinition Width="366*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Background="#FF0F1DA8"
-                Grid.Row="0"
-                Grid.ColumnSpan="3"/>
-        <TextBlock Text="Фитнес помощник"
+
+        <Rectangle Grid.ColumnSpan="4"
+                   Fill="#FF18357C"
+                />
+
+        <TextBlock     Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Text="Фитнес помощник"
                        Foreground="White"
+                       Margin="0 0"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       FontFamily="Microsoft Sans Serif"
+                       TextAlignment="Center"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontSize="30" Grid.Column="1" Height="53" Width="300" />
-        <TextBlock Text="Ваши текущие показатели:"
-                      Foreground="#FF0F1DA8"
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
-                       Grid.Column="0"
-                       Grid.Row="2"
-                       Height="33" Width="306" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
-            <TextBlock.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.172"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </TextBlock.RenderTransform>
-        </TextBlock>
+                       
+                />
 
-        <TextBlock Text="Вес (кг): "
-                      Foreground="#FF0F1DA8"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
-                       Grid.Column="0"
-                       Grid.Row="2"
-                   Margin="20,0,0,0" Height="34" Width="95">
-
-
-        </TextBlock>
-
-        <TextBlock Text="Рост (см): "
-                      Foreground="#FF0F1DA8"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
+        <TextBlock     x:Name="txtName"
                        Grid.Column="1"
-                       Grid.Row="2"
-                   Margin="20,0,0,0" Height="34" Width="114">
-
-
-        </TextBlock>
-
-        <TextBlock Text="Возраст: "
-                      Foreground="#FF0F1DA8"
+                       Grid.ColumnSpan="2"
+                       Grid.Row="1"
+                       Text="Добро пожаловать, Мария!"
+                       Foreground="#FF18357C"
+                       Margin="0 0"
+                       FontSize="22"
+                       FontWeight="Bold"
+                       FontFamily="Microsoft Sans Serif"
+                       TextAlignment="Center"
                        VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
-                       Grid.Column="2"
-                       Grid.Row="2"
-                   Margin="20,0,0,0" Height="34" Width="102">
+                       
+                />
+        <Line Grid.Row="2"
+              Grid.Column="1"
+              Grid.ColumnSpan="2"
+              Stroke="#FF18357C"
+              X1="0"
+              X2="400"
+              StrokeThickness="2"
+              HorizontalAlignment="Center"
+              />
 
+        <StackPanel  Grid.Row="2"
+                     Grid.RowSpan="8"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="4"
+                     >
 
-        </TextBlock>
-
-        <TextBlock Text="Индекс массы тела составляет: "
-                      Foreground="#FF0F1DA8"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
-                       Grid.Column="0"
-                       Grid.Row="3"
-                   TextWrapping="Wrap "
-                   Height="90"
-                   Width="210"/>
-        <TextBlock Foreground="#FF424644"
-                   Grid.Row="4"
-                   FontSize="19"
-                   Grid.ColumnSpan="3"
+            <TextBlock Text="Ваши текущие показатели:"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="80 20 0 0"
+                   VerticalAlignment="Center"
                    TextWrapping="Wrap"
-                   VerticalAlignment="Center" 
-                   HorizontalAlignment="Left">
-                  
-                       Величина, позволяющая оценить степень соответствия массы человека и его роста и тем самым 
-               <LineBreak/>
-                       косвенно судить о том, является ли масса недостаточной, нормальной или избыточной. Важен
-            <LineBreak/>
-                  при определении показаний для необходимости лечения.
+   
+                   />
 
+            <WrapPanel>
 
-
-
-
-        </TextBlock>
-        <TextBlock Text="Уровень базального метаболизма: "
-                      Foreground="#FF0F1DA8"
-                       VerticalAlignment="Top"
-                       HorizontalAlignment="Left"
-                       FontSize="25"
-                       Grid.Column="0"
-                       Grid.Row="5"
-                  
-                   TextWrapping="Wrap "
-                   Height="121"
-                   Width="210" Grid.RowSpan="3">
-
-
-        </TextBlock>
-        <TextBlock Foreground="#FF424644"
-                   Grid.Row="7"
-                   FontSize="19"
-                   Grid.ColumnSpan="3"
+                <TextBlock Text="Вес (кг.):"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="80 20 0 0"
+                   VerticalAlignment="Center"
                    TextWrapping="Wrap"
-                   VerticalAlignment="Top" 
-                   HorizontalAlignment="Left">
-                  
-                    Это приблизительное количество калорий, которые вы бы сожгли, если бы целые сутки провели,        
-               <LineBreak/>
-                    ничего не делая. Это минимальное количество энергии, необходимое для поддержания    
-            <LineBreak/>
-                    жизнедеятельности организма, включая такие его функции, как дыхание и сердцебиение.
+   
+                   />
+
+                <TextBlock x:Name="txtWeight"
+                   Text="54"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="20 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   />
+
+                <TextBlock Text="Рост (см.):"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="60 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+   
+                   />
+
+                <TextBlock x:Name="txtHeight"
+                   Text="173"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="20 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   />
+
+                <TextBlock Text="Возраст:"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="60 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+   
+                   />
+
+                <TextBlock x:Name="txtAge"
+                   Text="29"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="20 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   />
+            </WrapPanel>
+
+            <Line
+              Margin="0 30 0 0"
+              Stroke="#FF18357C"
+              X1="65"
+              X2="700"
+              StrokeThickness="2"
+              />
+
+            <WrapPanel>
+
+                <TextBlock Text="Индекс массы
+                           тела составляет:"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="60 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="WrapWithOverflow" 
+                           Width="130"
+   
+                   />
+
+
+                <TextBlock x:Name="txtUserMetrics"
+                   Text="18.04 кг/м2 Недостаточная (дефицит) масса тела"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="40 40 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   />
+
+            </WrapPanel>
+
+            <TextBlock Text="Величина, позваляющая оценить степень соответствия массы человека и его роста и тем самым
+                       косвенно судить о том, является ли масса недостаточной или избыточной. Важен
+                       при определении показаний для необходимости лечения."
+                   FontSize="14"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="70 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="WrapWithOverflow" Width="640"
+   
+                   />
+
+            <Line
+              Margin="0 20 0 0"
+              Stroke="#FF18357C"
+              X1="65"
+              X2="700"
+              StrokeThickness="2"
+              />
+
+
+            <WrapPanel>
+
+                <TextBlock Text="Уровень 
+                           базального
+                           метаболизма:"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="60 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="WrapWithOverflow"
+                   Width="100"
+                   />
+
+
+                <TextBlock x:Name="txtUserCalories"
+                   Text="1315 ккал/день"
+                   FontSize="16"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="80 50 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap"
+                   FontWeight="Bold"
+                   />
+
+            </WrapPanel>
+
+            <TextBlock Text="Это приблизительное количество калорий, которые вы бы сожгли, если бы целые сутки провели,
+                       ничего не делая. Это минимальное количество калорий энергии, необходимое для поддержания
+                       жизнедеятельности организма, включая такие его функции, как дыхание и серцебиение."
+                   FontSize="14"
+                   FontFamily="Microsoft Sans Serif"
+                   Foreground="#FF18357C"
+                   HorizontalAlignment="Left"
+                   Margin="70 20 0 0"
+                   VerticalAlignment="Center"
+                   TextWrapping="WrapWithOverflow"
+                   Width="650"
+                   />
 
 
 
+        </StackPanel>
 
 
-        </TextBlock>
+
         <Button x:Name="btn_izm"
                  Content="ИЗМЕНИТЬ ПОКАЗАТЕЛИ"
                  Foreground="White"
                  Background="#FF0F1DA8"
-                 FontSize="20"
-                 VerticalAlignment="Top"
-                 HorizontalAlignment="Left"
-                 Grid.Row="8" 
-                 Width="250"
-                 Height="50" 
-                 Grid.ColumnSpan="2"
-                 Margin="201,26,0,0" 
-                Click="izm" Grid.RowSpan="2"
+                 Grid.Column="1"
+                 Grid.Row="10" 
+                 Width="170"
+                 Height="40" 
+                Click="izm"
                 />
         <Button x:Name="btn_vyhod"
                  Content="ВЫХОД"
                  Foreground="#FF0F1DA8"
                  Background="White"
-                 FontSize="20"
-                 VerticalAlignment="Top"
-                 HorizontalAlignment="Right"
-                 Grid.Row="8"
-                 Width="250"
-                 Height="50" 
-                 Margin="0,26,145,0" 
-                 Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2"
+                 Width="170"
+                 Height="40" 
+                 Grid.Column="2"
+                 Grid.Row="10" Click="btn_vyhod_Click"
                 
                  />
     </Grid>

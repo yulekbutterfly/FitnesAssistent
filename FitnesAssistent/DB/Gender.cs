@@ -20,7 +20,7 @@ namespace FitnesAssistent.DB
             this.User = new HashSet<User>();
         }
     
-        public string idGender { get; set; }
+        public int idGender { get; set; }
         public string Gender1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

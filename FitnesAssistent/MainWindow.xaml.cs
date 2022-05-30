@@ -28,14 +28,37 @@ namespace FitnesAssistent
 
         private void btn_vxod_Click(object sender, RoutedEventArgs e)
         {
-            Assistent assistent = new Assistent();
-            assistent.Show();
+            if (String.IsNullOrWhiteSpace(tbLogin.Text))
+            {
+                MessageBox.Show("Поле ЛОГИН не должно быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            if (String.IsNullOrWhiteSpace(tbPassword.Text))
+            {
+                MessageBox.Show("Поле ЛОГИН не должно быть пустым", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var user = DB.AppData.context.User.ToList().Where(i=> i.Login==tbLogin.Text && i.Password==tbPassword.Text).FirstOrDefault();
+
+            if (user != null)
+            {
+                Assistent assistent = new Assistent(user);
+                this.Hide();
+                assistent.ShowDialog();
+                this.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не найден", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
 
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Registration registration = new Registration();
-            registration.Show();
+            registration.ShowDialog();
 
         }
     }

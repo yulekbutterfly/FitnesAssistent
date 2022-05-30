@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="FitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CalculTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -60,6 +61,9 @@
       <Project>{95f544ff-da89-4b72-a3a5-cc0a4992e239}</Project>
       <Name>FitnesAssistent</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
