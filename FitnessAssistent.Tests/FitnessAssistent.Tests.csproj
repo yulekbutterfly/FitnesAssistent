@@ -52,7 +52,11 @@
     <Compile Include="FitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="CalculTest.cs" />
+=======
+    <Compile Include="CalculTests.cs" />
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 =======
     <Compile Include="CalculTests.cs" />
 >>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa

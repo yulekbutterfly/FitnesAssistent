@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace FitnesAssistent.Validation
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
     public class Calculation
+=======
+    class Calculation
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 =======
     class Calculation
 >>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
@@ -35,7 +39,11 @@ namespace FitnesAssistent.Validation
         }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
 =======
 }
 >>>>>>> 6bd6f09e8e261400c050bd22524effb50ede74fa
